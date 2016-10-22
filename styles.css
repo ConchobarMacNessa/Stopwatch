@@ -1,0 +1,47 @@
+p {
+	font-family: monospace;
+	color: white;
+	font-size: 32px;
+}
+.stopwatch {
+	background-color: black;
+	border-radius: 25px;
+	text-align: center;
+	width: 300px;
+	height: 150px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding-top: 10px;
+	padding: 5px;
+}
+button {
+	border: solid 1px white;
+	font-family: monospace;
+	color: white;
+	border-radius: 25px;
+	font-size: 1.2em;
+	cursor: pointer;
+	margin: 8px;
+	background-color: black;
+	padding: 5px;
+}
+button:hover {
+	border: solid 1px white;
+	font-family: monospace;
+	color: black;
+	border-radius: 25px;
+	font-size: 1.2em;
+	cursor: pointer;
+	margin: 8px;
+	background-color: white;
+	padding: 5px;
+}
+h1 {
+	font-family: monospace;
+	font-size: 32px;
+	text-align: center
+}
