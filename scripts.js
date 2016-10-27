@@ -1,42 +1,41 @@
-window.onload = function () {
+		var status = 0;
+		var time = 0;
 
-var start = document.getElementbyId('start'),
-	stop = document.getElementbyId('stop'),
-	reset = document.getElementbyId('reset'),
-	secondsCount = document.getElementbyId('seconds'),
-	minutesCount = document.getElementbyId('minutes'),
-	seconds = 00,
-	minutes = 00,
-	time;
+		function start() {
+			status = 1;
+			document.getElementById("startBtn").disabled = true;
+			timer();
+		}
+		function stop() {
+			status = 0;
+			document.getElementById("startBtn").disabled = false;
+		}
+		function reset() {
+			status = 0;
+			time = 0;
+			document.getElementById("startBtn").disabled = false;
+			document.getElementById("timerLabel").innerHTML = "00:00:00";
+		}
+		function timer() {
+			if(status == 1){
+				setTimeout(function(){
+					time++;
+					var min = Math.floor(time/100/60);
+					var sec = Math.floor(time/100);
+					var mSec = time % 100;
 
-start.onlick = function () {
-	clearInterval(time);
-	time = setInterval(startTimer, 10);
-}
-stop.onlick = function () {
-	clearInterval(time);
-}
-reset.onlick = function () {
-	clearInterval(time);
-	seconds = 00;
-	minutes = 00;
-	secondsCount.innerHTML = seconds;
-	minutesCount.innerHTML = minutes;
-}
-function startTimer () {
-	seconds++;
-	if (seconds < 9) {
-		secondsCount.innerHTML = '0' + seconds;
-	} if (seconds > 9) {
-		secondsCount.innerHTML = seconds;
-	} if (seconds > 59) {
-		console.log("minutes");
-		minutes++;
-		minutesCount.innerHTML = "0" + minutes;
-		seconds = 0;
-		secondsCount.innerHTML = "0" + 0
-	} if ( minutes > 9) {
-		minutesCount.innerHTML = minutes;
-	}
-}
-}
+					if(min < 10){
+						min = "0" + min;
+					}
+					if(sec >= 60) {
+						sec = sec % 60;
+					}
+					if(sec < 10) {
+						sec = "0" + sec;
+					}
+					document.getElementById("timerLabel").innerHTML = min + ":" + sec + ":" + mSec;
+					timer()
+
+				}, 10);
+			}
+		}

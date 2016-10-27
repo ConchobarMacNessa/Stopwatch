@@ -1,4 +1,4 @@
-p {
+h2 {
 	font-family: monospace;
 	color: white;
 	font-size: 32px;
@@ -18,7 +18,7 @@ p {
 	padding-top: 10px;
 	padding: 5px;
 }
-button {
+input {
 	border: solid 1px white;
 	font-family: monospace;
 	color: white;
@@ -29,7 +29,7 @@ button {
 	background-color: black;
 	padding: 5px;
 }
-button:hover {
+input:hover {
 	border: solid 1px white;
 	font-family: monospace;
 	color: black;
