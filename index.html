@@ -8,10 +8,12 @@
 	<body>
 		<div class="container">
 			<h1>Stopwatch by Alice Carr</h1>
-			<h2 id="timerLabel">00:00:00</h2>
-			<input type="button" value="START" class="myButton" onclick="start()" id="startBtn">
-			<input type="button" value="STOP" class="myButton" onclick="stop()">
-			<input type="button" value="RESET" class="myButton" onclick="reset()">
+			<div class="stopwatch">
+			<h2 id="timer">00:00:00</h2>
+			<input type="button" value="START" onclick="start()" id="startBtn">
+			<input type="button" value="STOP" onclick="stop()">
+			<input type="button" value="RESET" onclick="reset()">
+			</div>
 		</div>
 		<script type="text/javascript" src="scripts.js"></script>
 	</body>

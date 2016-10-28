@@ -14,7 +14,7 @@
 			status = 0;
 			time = 0;
 			document.getElementById("startBtn").disabled = false;
-			document.getElementById("timerLabel").innerHTML = "00:00:00";
+			document.getElementById("timer").innerHTML = "00:00:00";
 		}
 		function timer() {
 			if(status == 1){
@@ -33,7 +33,7 @@
 					if(sec < 10) {
 						sec = "0" + sec;
 					}
-					document.getElementById("timerLabel").innerHTML = min + ":" + sec + ":" + mSec;
+					document.getElementById("timer").innerHTML = min + ":" + sec + ":" + mSec;
 					timer()
 
 				}, 10);
